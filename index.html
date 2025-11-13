@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Tools Hub</title>
-    <base href="/"> 
+    <!-- CRUCIAL: Ajuste para Project Page (/dev-tools-hub/) -->
+    <base href="/dev-tools-hub/"> 
+    <!-- Adiciona a fonte Inter para um look moderno -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
         /* INÍCIO DO CSS */
@@ -200,8 +202,12 @@
     </style>
 </head>
 <body>
+<!-- FIM DO CSS -->
+
+<!-- INÍCIO DO HTML -->
 <div class="container">
     
+    <!-- Logotipo com ícone SVG -->
     <div class="logo-header">
         <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2M18 20H6V4H13V9H18V20M8 12L10 14L8 16V17H16V16L14 14L16 12V11H8V12Z" />
@@ -210,6 +216,7 @@
         <p>Seu centro de downloads de ferramentas de programação</p>
     </div>
 
+    <!-- Botão Principal (DOWNLOAD LUA) -->
     <div class="download-section">
         <h2>LUA</h2>
         <button id="download-lua" class="btn" data-program="Lua">
@@ -217,6 +224,7 @@
         </button>
     </div>
 
+    <!-- Seção de Pesquisa -->
     <div class="search-section">
         <button id="search-button" class="btn">
             Pesquisar Outro
@@ -226,15 +234,20 @@
 
 </div>
 
+<!-- Janela Modal (Pop-up) -->
 <div id="download-modal" class="modal">
     <div class="modal-content">
         <h2 id="modal-title"></h2>
         <p>Selecione a opção de download:</p>
         <div id="modal-options">
-            </div>
+            <!-- Opções de link são injetadas aqui -->
+        </div>
         <button onclick="closeModal()">Fechar</button>
     </div>
 </div>
+<!-- FIM DO HTML -->
+
+<!-- INÍCIO DO JAVASCRIPT -->
 <script>
     // Referências dos Elementos DOM
     const downloadLuaBtn = document.getElementById('download-lua');
@@ -335,6 +348,3 @@
 </script>
 </body>
 </html>
-```eof
-
-**Lembre-se:** Depois de substituir o código e confirmar a edição no GitHub, você precisa **aguardar a nova construção** (o check verde na aba **Actions**). Boa sorte!
