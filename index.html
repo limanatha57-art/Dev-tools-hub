@@ -4,19 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev Tools Hub</title>
-    <!-- Adiciona a fonte Inter para um look moderno -->
+    <base href="/"> 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
     <style>
-        /* Paleta Minimalista */
+        /* INÍCIO DO CSS */
         :root {
-            --color-background: #F8F8F8; /* Fundo muito claro */
-            --color-accent: #1D4ED8; /* Azul Índigo Profissional */
-            --color-text: #374151; /* Cinza escuro para texto */
-            --color-border: #E5E7EB; /* Borda clara */
+            /* Paleta Minimalista */
+            --color-background: #F8F8F8; 
+            --color-accent: #1D4ED8; /* Azul Índigo Profissional (Destaque) */
+            --color-text: #374151; 
+            --color-border: #E5E7EB;
             --color-success: #059669; 
         }
 
-        /* CSS para Estilização Minimalista */
+        /* Estilos Gerais e Layout */
         body {
             font-family: 'Inter', sans-serif;
             display: flex;
@@ -32,18 +33,17 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 30px; /* Reduz o espaçamento */
+            gap: 30px;
             padding: 40px;
             background-color: white;
             border-radius: 10px;
-            /* Sombra sutil para um look mais minimalista e flutuante */
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
             border: 1px solid var(--color-border);
             max-width: 90%;
-            width: 450px; /* Ligeiramente mais estreito */
+            width: 450px;
         }
         
-        /* Área do Logotipo e Título */
+        /* Estilos do Logotipo */
         .logo-header {
             text-align: center;
             margin-bottom: 20px;
@@ -51,7 +51,6 @@
         }
 
         .logo-icon {
-            /* Ícone de código em SVG simples (simulando um logo) */
             fill: var(--color-accent);
             width: 40px;
             height: 40px;
@@ -72,6 +71,7 @@
             font-weight: 500;
         }
 
+        /* Estilos das Seções */
         .download-section, .search-section {
             display: flex;
             flex-direction: column;
@@ -84,9 +84,10 @@
             font-size: 2.5em;
             color: var(--color-text);
             margin-bottom: 15px;
-            font-weight: 300; /* Mais leve para minimalismo */
+            font-weight: 300; 
         }
 
+        /* Estilos de Botões e Inputs */
         .btn {
             padding: 14px 25px;
             font-size: 1.05em;
@@ -100,10 +101,9 @@
             display: inline-block;
             font-weight: 600;
             min-width: 220px;
-            box-shadow: none; /* Sem sombra nos botões */
         }
         
-        /* Destaque: Botão principal (Lua) com preenchimento sólido */
+        /* Botão Destaque (Lua) */
         #download-lua {
             background-color: var(--color-accent);
             color: white;
@@ -112,11 +112,11 @@
         }
 
         #download-lua:hover {
-            background-color: #1E40AF; /* Um pouco mais escuro no hover */
+            background-color: #1E40AF;
             transform: translateY(-1px);
         }
 
-        /* Botão de Pesquisa: Estilo Contorno (Outline) */
+        /* Botão Contorno (Pesquisa) */
         #search-button {
             background-color: transparent;
             color: var(--color-accent);
@@ -147,7 +147,7 @@
             outline: none;
         }
 
-        /* Modal Minimalista */
+        /* Estilos da Janela Modal */
         .modal {
             position: fixed;
             top: 0;
@@ -177,11 +177,6 @@
             font-weight: 600;
         }
         
-        .modal-content p {
-            margin-bottom: 20px;
-            font-size: 0.95em;
-        }
-
         .modal-content a.btn {
             background-color: var(--color-success);
             color: white;
@@ -191,45 +186,30 @@
             font-size: 0.9em;
             box-shadow: none;
         }
-        
-        .modal-content a.btn:hover {
-            background-color: #047857;
-            border-color: #047857;
-            transform: none;
-        }
 
         .modal-content button {
             margin-top: 20px;
             padding: 10px 20px;
             font-size: 0.9em;
-            background-color: #9CA3AF; /* Cinza suave */
+            background-color: #9CA3AF; 
             color: white;
             border: none;
             border-radius: 6px;
             cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-        .modal-content button:hover {
-            background-color: #6B7280;
         }
     </style>
 </head>
 <body>
-
 <div class="container">
     
-    <!-- Logotipo e Título Centralizado -->
     <div class="logo-header">
         <svg class="logo-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <!-- Ícone de colchetes simples (representando código/ferramentas) -->
             <path d="M14 2H6C4.9 2 4 2.9 4 4V20C4 21.1 4.9 22 6 22H18C19.1 22 20 21.1 20 20V8L14 2M18 20H6V4H13V9H18V20M8 12L10 14L8 16V17H16V16L14 14L16 12V11H8V12Z" />
         </svg>
         <h1>Dev Tools Hub</h1>
         <p>Seu centro de downloads de ferramentas de programação</p>
     </div>
 
-    <!-- Seção de Download Lua (Destaque Principal) -->
     <div class="download-section">
         <h2>LUA</h2>
         <button id="download-lua" class="btn" data-program="Lua">
@@ -237,7 +217,6 @@
         </button>
     </div>
 
-    <!-- Seção de Pesquisa (Minimalista) -->
     <div class="search-section">
         <button id="search-button" class="btn">
             Pesquisar Outro
@@ -247,20 +226,17 @@
 
 </div>
 
-<!-- JANELA MODAL -->
 <div id="download-modal" class="modal">
     <div class="modal-content">
         <h2 id="modal-title"></h2>
         <p>Selecione a opção de download:</p>
         <div id="modal-options">
-            <!-- As opções de download serão injetadas aqui pelo JavaScript -->
-        </div>
+            </div>
         <button onclick="closeModal()">Fechar</button>
     </div>
 </div>
-
 <script>
-    // Referências aos elementos
+    // Referências dos Elementos DOM
     const downloadLuaBtn = document.getElementById('download-lua');
     const searchButton = document.getElementById('search-button');
     const searchBox = document.getElementById('search-box');
@@ -268,37 +244,30 @@
     const modalTitle = document.getElementById('modal-title');
     const modalOptions = document.getElementById('modal-options');
 
-    // DICIONÁRIO DE PROGRAMAS COM OS LINKS ESPECIFICADOS PELO USUÁRIO
+    // DICIONÁRIO DE PROGRAMAS COM LINKS VERIFICADOS
     const programs = {
         'lua': [
-            // Link direto para a versão binária lua-5.4.2_Win32_bin.zip
             { name: 'Instalador: lua-5.4.2_Win32_bin.zip', link: 'https://www.lua.org/ftp/lua-5.4.2_Win32_bin.zip' }
         ],
         'python': [
-            // Link para a página de downloads oficial, simulando o download do python-manager-25.0.msix
             { name: 'Página de Downloads (Para: python-manager-25.0.msix)', link: 'https://www.python.org/downloads/' }
         ],
         'c++': [
-            // Link direto para o Dev-C++, que é o ambiente que instala o TDM-GCC
             { name: 'Instalador: Dev-Cpp 5.11 TDM-GCC 4.9.2 Setup.exe', link: 'https://sourceforge.net/projects/orwelldevcpp/files/latest/download' }
         ],
         'java': [
-            // Link para o Oracle Java Development Kit (JDK)
             { name: 'Download Java JDK (Oracle)', link: 'https://www.oracle.com/java/technologies/downloads/' }
         ],
         'c#': [
-            // Link para a plataforma .NET da Microsoft
             { name: 'Download .NET SDK (Para C#)', link: 'https://dotnet.microsoft.com/en-us/download' } 
         ],
         'php': [
-            // Link para a página de download do PHP
             { name: 'Download Oficial PHP', link: 'https://www.php.net/downloads' } 
         ],
     };
 
     /**
      * Abre a janela modal com as opções de download para um programa específico.
-     * @param {string} programName - O nome do programa (ex: 'lua', 'python').
      */
     function openDownloadModal(programName) {
         const key = programName.toLowerCase(); 
@@ -316,7 +285,7 @@
                 btn.textContent = `Acessar ${option.name}`;
                 btn.classList.add('btn');
                 btn.target = "_blank"; 
-                btn.rel = "noopener noreferrer";
+                btn.rel = "noopener noreferrer"; 
                 
                 modalOptions.appendChild(btn);
             });
@@ -366,3 +335,6 @@
 </script>
 </body>
 </html>
+```eof
+
+**Lembre-se:** Depois de substituir o código e confirmar a edição no GitHub, você precisa **aguardar a nova construção** (o check verde na aba **Actions**). Boa sorte!
